@@ -8,6 +8,22 @@
 - pandas
 - numpy
 ---
+
+## 脚本说明
+- citylist_spider.py爬取城市code
+- city.csv存储省、城市及对应code
+- jobs_spider.py 爬取职位
+- 使用前配置好MongoDB，创建table，并提前在signal字段下随意输入（确保signal字段下非空）
+
+---
+
+## 使用方法
+- 运行citylist_spider.py爬取城市code，存入数据库中 或 直接使用city.csv
+- 运行jobs_spider.py 
+- **注意控制爬取频率或添加代理池**
+
+---
+
 ## 爬虫实现过程
 ### 分析URL
 ![url](pics/url.png)
@@ -17,7 +33,7 @@
 ---
 
 ### 爬取所有省、市对应的code
-city.py实现地区与对应code的爬取
+citylist_spider.py实现地区与对应code的爬取
 ![效果图1](pics/1.png)
 
 ---
