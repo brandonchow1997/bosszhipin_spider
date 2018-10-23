@@ -72,6 +72,36 @@ city.py实现地区与对应code的爬取
 
 <img src="pics/13.png" width=360 height=300 />
 
+---
 
+## 机器学习部分分析
+<img src="pics/ML部分/过滤薪资.png" width=360 height=300 />
 
 ---
+
+<img src="pics/ML部分/过滤后的分布.png" width=360 height=300 />
+
+---
+
+<img src="pics/ML部分/筛选岗位数量前150.png" width=300 height=200 />
+
+---
+
+<img src="pics/ML部分/属性合并.png" width=300 height=500 />
+
+---
+
+<img src="pics/ML部分/划分训练集与测试集.png" width=600 height=300 />
+
+---
+
+<img src="pics/ML部分/为标签编码.png" width=350 height=400 />
+
+---
+### **变量重要性**
+
+<img src="pics/ML部分/变量重要性.png" width=350 height=400 />
+
+---
+
+<img src="pics/ML部分/重要性分析.png" width=500 height=150 />
