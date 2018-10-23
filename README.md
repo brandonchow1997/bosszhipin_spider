@@ -8,22 +8,6 @@
 - pandas
 - numpy
 ---
-
-## 脚本说明
-- citylist_spider.py爬取城市code
-- city.csv存储省、城市及对应code
-- jobs_spider.py 爬取职位
-- 使用前配置好MongoDB，创建table，并提前在signal字段下随意输入（确保signal字段下非空）
-
----
-
-## 使用方法
-- 运行citylist_spider.py爬取城市code，存入数据库中 或 直接使用city.csv
-- 运行jobs_spider.py 
-- **注意控制爬取频率或添加代理池**
-
----
-
 ## 爬虫实现过程
 ### 分析URL
 ![url](pics/url.png)
@@ -33,61 +17,60 @@
 ---
 
 ### 爬取所有省、市对应的code
-citylist_spider.py实现地区与对应code的爬取
-![效果图1](pics/1.png)
-
+city.py实现地区与对应code的爬取
+<img src="pics/1.png" width=200 height=280 />
 ---
 ### 根据codelist爬取所有地区的职位
 - 爬取内容包含：signal、省、市、职位名称、薪资、公司名称、工作经验、学历要求、公司规模。
-<img src="pics/3.png" width=256 height=256 />
+<img src="pics/3.png" width=300 height=40 />
 - signal字段作用在于重复爬取时跳过已爬取的页面。
 - 存入MongoDB中
-![效果图2](pics/2.png)
+<img src="pics/2.png" width=300 height=180 />
 
 ---
 ## 进行数据分析
 ### 读取数据
 利用pandas读取数据库中数据
-![效果图4](pics/4.png)
+<img src="pics/4.png" width=360 height=190 />
 
 ---
 ### 添加新列：salary
 利用正则提取出[职位薪资]
-![效果图5](pics/5.png)
+<img src="pics/5.png" width=360 height=190 />
 
 ---
 ### 数据清洗 
 - 移除重复数据
 
-![效果图6](pics/6.png)
+<img src="pics/6.png" width=360 height=300 />
 
 ---
 
 - 数据筛选过滤，去除过高和过低的薪资
-![效果图7](pics/7.png)
-![效果图9](pics/9.png)
+<img src="pics/7.png" width=360 height=300 />
+<img src="pics/9.png" width=360 height=300 />
 
 - 去除与“数据分析”无关的岗位信息
 
 ---
 ## 数据可视化
-![效果图10](pics/10.png)
+<img src="pics/10.png" width=360 height=300 />
 
 ---
 
-![效果图11](pics/11.png)
+<img src="pics/11.png" width=360 height=300 />
 
 ---
 
-![效果图12](pics/12.png)
+<img src="pics/12.png" width=360 height=300 />
 
 ---
 
-![效果图14](pics/14.png)
+<img src="pics/14.png" width=360 height=300 />
 
 ---
 
-![效果图13](pics/13.png)
+<img src="pics/13.png" width=360 height=300 />
 
 
 
