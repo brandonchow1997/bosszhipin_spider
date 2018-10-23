@@ -39,7 +39,7 @@ citylist_spider.py实现地区与对应code的爬取
 ---
 ### 根据codelist爬取所有地区的职位
 - 爬取内容包含：signal、省、市、职位名称、薪资、公司名称、工作经验、学历要求、公司规模。
-![效果图3](pics/3.png)
+<img src="pics/3.png" width=256 height=256 />
 - signal字段作用在于重复爬取时跳过已爬取的页面。
 - 存入MongoDB中
 ![效果图2](pics/2.png)
